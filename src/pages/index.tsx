@@ -3,7 +3,9 @@ import Todo from "../components/Todo";
 import { useState } from "react";
 import FormTodo from "../components/FormTodo";
 import { TodoType } from "../../types/types";
-
+import dbConnect from "../../server/utils/dbConnect";
+import TodoModel from "../../server/models/todo";
+// dbConnect();
 type TodosPropsType = {
   todos: TodoType[];
 };
@@ -39,11 +41,13 @@ export default function Home({ todos }: TodosPropsType) {
 }
 
 export const getServerSideProps = async () => {
-  const { data } = await axios.get<TodosPropsType>(
-    "http://localhost:3000/api/todos"
-  );
+  // const { data } = await axios.get<TodosPropsType>(
+  //   "http://localhost:3000/api/todos"
+  // );
+  dbConnect();
+  const todos = await TodoModel.find({});
 
   return {
-    props: { todos: data.todos },
+    props: { todos: JSON.parse(JSON.stringify(todos)) },
   };
 };
