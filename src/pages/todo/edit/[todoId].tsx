@@ -40,7 +40,7 @@ function EditPage({ todo }: TodoPageType) {
   return (
     <form
       onSubmit={formHandler}
-      className=" flex flex-col w-1/2  mx-auto space-y-3 px-4 "
+      className=" flex flex-col md:w-1/2  mx-auto space-y-3 px-4 "
     >
       <input
         className="bg-primary-300/40 px-4 py-3 rounded-md w-full  text-gray-700 focus:outline-none"
@@ -60,15 +60,18 @@ function EditPage({ todo }: TodoPageType) {
         <option value="back-end">Back-End</option>
         <option value="front-end">Front-End</option>
       </select>
-      <div>
+      <div className="flex items-center space-x-1">
         <input
+          className="w-4 h-4 border-primary-300 appearance-none border-2 rounded-sm checked:bg-primary-500"
           type="checkbox"
           name="checked"
           id="checked"
           checked={checked}
           onChange={() => setChecked(!checked)}
         />
-        <label htmlFor="checked">is completed ?</label>
+        <label htmlFor="checked" className="text-sm text-gray-700">
+          is completed ?
+        </label>
       </div>
       <div className="flex space-x-3">
         <button className="bg-primary-500 text-white px-4 py-3 rounded-md w-full">

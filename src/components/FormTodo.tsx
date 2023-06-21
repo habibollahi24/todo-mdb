@@ -22,12 +22,13 @@ function FormTodo({ setAllTodos }: FormDataType) {
     }
     const { data } = await axios.post("/api/todos", todoData);
     setAllTodos(data.todos);
+    setTodoData({ title: "", category: "" });
   };
 
   return (
     <form
       onSubmit={formHandler}
-      className=" flex flex-col w-3/4 items-center mx-auto space-y-3 px-4 "
+      className=" flex flex-col md:w-3/4  items-center mx-auto space-y-3  "
     >
       <input
         className="bg-primary-300/40 px-4 py-3 rounded-md w-full  text-gray-700 focus:outline-none"
@@ -44,8 +45,12 @@ function FormTodo({ setAllTodos }: FormDataType) {
         value={todoData.category}
       >
         <option value="">select category</option>
-        <option value="back-end">Back-End</option>
-        <option value="front-end">Front-End</option>
+        <option value="code">Code</option>
+        <option value="homeWork">Home Work</option>
+        <option value="game">Game</option>
+        <option value="debit">Debit</option>
+        <option value="practice">Practice</option>
+        <option value="buy">Buy</option>
       </select>
       <button
         type="submit"
