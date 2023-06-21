@@ -29,11 +29,11 @@ function Todo({ todo, setTodosList }: TodoProps) {
   };
 
   return (
-    <div className="flex relative justify-between items-center  bg-primary-300/30 rounded-md p-6  mb-4">
-      <div className="text-gray-700 text-2xl">
+    <div className="flex flex-col  relative overflow-hidden justify-between items-start h-40   bg-primary-300/20 rounded-md p-2  mb-4">
+      <div className="text-gray-700 text-xl">
         <Link href={`/todo/${todo._id}`}>{todo.title}</Link>
       </div>
-      <div className="space-x-3">
+      <div className="space-x-3 absolute right-2 bottom-2">
         <button
           onClick={() => completedHandler(todo._id)}
           className="inline-block text-xs"
@@ -53,7 +53,7 @@ function Todo({ todo, setTodosList }: TodoProps) {
           Delete
         </button>
       </div>
-      <div className="absolute  -top-2 rounded-md -left-2 bg-primary-500 p-[3px] text-white text-xs">
+      <div className="absolute  top-0 px-5  right-0 bg-primary-300 p-[4px] text-white text-xs">
         {todo.category}
       </div>
     </div>

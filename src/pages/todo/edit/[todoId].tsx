@@ -19,7 +19,7 @@ function EditPage({ todo }: TodoPageType) {
   });
 
   const changeHandler = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setTodoData({ ...todoData, [e.target.name]: e.target.value });
   };
@@ -42,12 +42,11 @@ function EditPage({ todo }: TodoPageType) {
       onSubmit={formHandler}
       className=" flex flex-col md:w-1/2  mx-auto space-y-3 px-4 "
     >
-      <input
+      <textarea
         className="bg-primary-300/40 px-4 py-3 rounded-md w-full  text-gray-700 focus:outline-none"
         name="title"
         onChange={changeHandler}
         value={todoData.title}
-        type="text"
         placeholder="add Title ..."
       />
       <select
