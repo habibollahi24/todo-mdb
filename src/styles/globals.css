@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color-500: 79 70 229;
+    --primary-color-300: 165 180 252;
+    --secondary-color-500: 59 130 246;
+    --danger-color: 219 39 119;
+    --success-color: 16 185 129;
+  }
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* :root {
+  --primary-color-500: rgb(79, 70, 229);
+  --primary-color-300: rgb(165, 180, 252);
+  --secondary-color-500: rgb(59, 130, 246);
+  --danger-color: rgb(219, 39, 119);
+  --success-color: rgb(16, 185, 129);
+} */

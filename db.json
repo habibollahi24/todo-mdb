@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "title - 10000000000",
+      "body": "mamaddd"
+    },
+    {
+      "id": 2,
+      "title": "title -- 2",
+      "body": "pouyaaaa"
+    },
+    {
+      "id": 3,
+      "title": "title --- 300",
+      "body": "chommmm"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
