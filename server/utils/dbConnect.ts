@@ -11,7 +11,7 @@ export default async function dbConnect() {
     return;
   }
   const db = await mongoose.connect(
-    "mongodb+srv://habibollahi24:5H6EQ3ynL4mX4w2e@cluster0.biezjwk.mongodb.net/firtsTodo",
+    "mongodb+srv://habibollahi24:qSa7BesfzClCezvI@cluster0.7ala6ey.mongodb.net/firtsTodo",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
